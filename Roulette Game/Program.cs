@@ -10,9 +10,10 @@ namespace Roulette_Game
     public class Program
     {
         public Wheel Wheel = new Wheel();
-        public BetLocation BetLocation = new BetLocation();
+        public static BetLocation BetLocation = new BetLocation();
 
         public static int creditsTotal = 1000;
+        public static int betAmount = 0;
 
         public static void Main(string[] args)
         {
@@ -23,12 +24,17 @@ namespace Roulette_Game
         public static void PlaceBet()
         {
             Console.WriteLine("What is your bet amount?");
+
             int betAmount = Convert.ToInt32(Console.ReadLine());
 
             if (betAmount > creditsTotal || betAmount <= 0)
                 Console.WriteLine("Insufficient Funds");
             else if (betAmount <= creditsTotal)
                 Console.WriteLine("your current bet is {0}", betAmount);
+            Console.WriteLine();
+
+            BetLocation.BetSelection();
+
         }
     }
 }
