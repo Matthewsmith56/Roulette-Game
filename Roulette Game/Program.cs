@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Roulette_Game
 {
+    
     public class Program
     {
+        public Wheel Wheel = new Wheel();
+        public BetLocation BetLocation = new BetLocation();
+
         public static int creditsTotal = 1000;
 
         public static void Main(string[] args)
