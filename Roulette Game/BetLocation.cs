@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,10 +18,10 @@ namespace Roulette_Game
             27,28,29,30,31,32,33,34,
             35,36,37,38
         };
-
+        
         public static void BetSelection()
         {
-
+            int betAmount = Program.betAmount;
             Console.WriteLine("Select your number by typing it in then press enter\n " +
                               "1,2,3,4,5,6,7,8,9,10,\n" +
                               "11,12,13,14,15,16,17,18,19,20,\n" +
@@ -33,7 +34,8 @@ namespace Roulette_Game
 
             if (tempLocation != "00" && tempLocation != "0")
             {
-                 betLocation = Convert.ToInt32(Console.ReadLine());
+                int num1 = Convert.ToInt32(tempLocation);
+                betLocation = num1;
             }
             else if (tempLocation == "00")
             {
@@ -49,16 +51,18 @@ namespace Roulette_Game
 
             if (winningNumber == betLocation)
             {
-                Program.creditsTotal += Program.betAmount * 35;
-                Console.WriteLine($"CONGRATULATIONS, YOU WON {0} " +
-                                  $"Credits! Your current balance is {1}", Program.betAmount * 35, Program.creditsTotal);
+                Program.beginingCredits += betAmount * 35;
+                Console.WriteLine("CONGRATULATIONS, YOU WON");
                 BetSelection();
             }
             else
             {
-                Program.creditsTotal -= Program.betAmount;
-                Console.WriteLine($"Sorry, try again. You lost {0} Credits", Program.betAmount);
+                Program.beginingCredits -= betAmount;
+                Console.WriteLine("Sorry, try again. Press enter to continue");
             }
+            Console.ReadKey();
+            Console.Clear();
+            MenuClass.Menu();
         }
     }
 }
