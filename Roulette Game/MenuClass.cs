@@ -10,6 +10,8 @@ namespace Roulette_Game
     {
         public static void Menu()
         {
+            var mySelect = "0";
+
             Console.WriteLine("What you like to do? " +
                               "\n1 = Check Funds " +
                               "\n2 = Bet on Single Number" +
@@ -22,19 +24,21 @@ namespace Roulette_Game
                               "\n9 = Bet on Double Street 1,2,3,4,5,6, / 7,8,9,10,11,12, Ect.." +
                               "\n10 = Bet on two number Split 1,2 / 29, 29 Ect.." +
                               "\n11 = Bet on four way intersection 1,2,4,5, Ect..");
-            var mySelect = Console.ReadLine();
+
+            mySelect = Console.ReadLine();
+
             if (mySelect == "1")
                 CheckFunds();
             if (mySelect == "2")
                 SingleNumberClass.BetOnSingleNumber();
             if (mySelect == "3")
-                OddOrEvenClass.BetOnEvenorOdd();
-            //if (mySelect == "4")
-            //    BetOnRedorBalck();
-            //if (mySelect == "5")
-            //    BetOnLowsOrhighs();
-            //if (mySelect == "6")
-            //    BetOnDozen();
+                ChoiceIllusionClass.OddOrEven();
+            if (mySelect == "4")
+                ChoiceIllusionClass.RedOrBlack();
+            if (mySelect == "5")
+                ChoiceIllusionClass.BetOnLowsOrhighs();
+            if (mySelect == "6")
+                ChoiceIllusionClass.BetOnDozen();
             //if (mySelect == "7")
             //    BetOnColumns();
             //if (mySelect == "8")
@@ -57,5 +61,6 @@ namespace Roulette_Game
             Console.WriteLine();
             Menu();
         }
+       
     }
 }

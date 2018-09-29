@@ -28,7 +28,6 @@ namespace Roulette_Game
             if (currentBet > Program.beginingCredits || currentBet <= 0)
                 Console.WriteLine("Insufficient Funds");
             else if (currentBet <= Program.beginingCredits)
-                Console.WriteLine("your current bet is {0}", currentBet);
             Console.WriteLine();
 
             Console.WriteLine("Select your number by typing it in then press enter\n " +

@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChoiceIllusionClass.cs" />
     <Compile Include="OddOrEvenClass.cs" />
+    <Compile Include="OneInFourtySixOddsClass.cs" />
+    <Compile Include="RedOrBlackClass.cs" />
     <Compile Include="SingleNumberClass.cs" />
     <Compile Include="MenuClass.cs" />
     <Compile Include="Program.cs" />
