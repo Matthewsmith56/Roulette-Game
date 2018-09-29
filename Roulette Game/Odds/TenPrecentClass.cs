@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Roulette_Game
 {
-    public class OneInFourtySixOddsClass
+    public class TenPrecentClass
     {
-        public static void OneInFourtySix()
+        public static void TenPrecent()
         {
             Console.WriteLine("What is your bet amount?");
 
@@ -23,9 +23,9 @@ namespace Roulette_Game
             var random = new Random();
             int winningNumber = random.Next(1, 10001);
 
-            if (winningNumber <= 4632)
+            if (winningNumber <= 1053)
             {
-                Program.beginingCredits += currentBet * 2;
+                Program.beginingCredits += currentBet * 8;
                 Console.WriteLine("CONGRATULATIONS, YOU WON, Press enter to continue");
             }
             else

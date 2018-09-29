@@ -39,16 +39,16 @@ namespace Roulette_Game
                 ChoiceIllusionClass.BetOnLowsOrhighs();
             if (mySelect == "6")
                 ChoiceIllusionClass.BetOnDozen();
-            //if (mySelect == "7")
-            //    BetOnColumns();
-            //if (mySelect == "8")
-            //    BetOnStreet();
-            //if (mySelect == "9")
-            //    BetOnDoubleStreet();
-            //if (mySelect == "10")
-            //    BetOnSplit();
-            //if (mySelect == "11")
-            //    BetOnIntersect();
+            if (mySelect == "7")
+                ChoiceIllusionClass.OneBetOnColumns();
+            if (mySelect == "8")
+                ChoiceIllusionClass.BetOnStreet();
+            if (mySelect == "9")
+                ChoiceIllusionClass.BetOnDoubleStreet();
+            if (mySelect == "10")
+                ChoiceIllusionClass.BetOnSplit();
+            if (mySelect == "11")
+                ChoiceIllusionClass.BetOnIntersect();
             else
                 Console.WriteLine("not a Valid input");
             Menu();

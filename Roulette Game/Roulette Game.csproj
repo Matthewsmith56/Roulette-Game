@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChoiceIllusionClass.cs" />
-    <Compile Include="OddOrEvenClass.cs" />
-    <Compile Include="OneInFourtySixOddsClass.cs" />
-    <Compile Include="RedOrBlackClass.cs" />
+    <Compile Include="Odds\ElevenPrecentClass.cs" />
+    <Compile Include="Odds\FivePrecentClass.cs" />
+    <Compile Include="Odds\FourtySixPrecentClass.cs" />
+    <Compile Include="Odds\SixteenPrecentClass.cs" />
+    <Compile Include="Odds\TenPrecentClass.cs" />
+    <Compile Include="Odds\ThirtyTwoPrecentClass.cs" />
     <Compile Include="SingleNumberClass.cs" />
     <Compile Include="MenuClass.cs" />
     <Compile Include="Program.cs" />
@@ -55,5 +58,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
