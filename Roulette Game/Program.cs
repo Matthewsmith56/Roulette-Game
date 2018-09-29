@@ -9,9 +9,8 @@ namespace Roulette_Game
     
     public class Program
     {
-        public Wheel Wheel = new Wheel();
         public static BetLocation BetLocation = new BetLocation();
-        public MenuClass MenuClass = new MenuClass();
+        public MenuClass MenuClass= new MenuClass();
 
         public static int beginingCredits = 1000;
         public static int betAmount = 0;
@@ -22,26 +21,37 @@ namespace Roulette_Game
             MenuClass.Menu();
         }
         
-        public static void CheckFunds()
-        {
-            Console.WriteLine("You currently have {0} Credits press enter to continue", beginingCredits);
-            Console.ReadKey();
-            Console.WriteLine();
-            MenuClass.Menu();
-        }
+        
 
         public static void BetOnNumber()
         {
             Console.WriteLine("What is your bet amount?");
 
-            int betAmount = Convert.ToInt32(Console.ReadLine());
+            int currentBet = Convert.ToInt32(Console.ReadLine());
 
-            if (betAmount > beginingCredits || betAmount <= 0)
+            if (currentBet > beginingCredits || currentBet <= 0)
                 Console.WriteLine("Insufficient Funds");
-            else if (betAmount <= beginingCredits)
-                Console.WriteLine("your current bet is {0}", betAmount);
+            else if (currentBet <= beginingCredits)
+                Console.WriteLine("your current bet is {0}", currentBet);
             Console.WriteLine();
-            BetLocation.BetSelection();
         }
     }
 }
+
+
+//string tempLocation = Convert.ToString(Console.ReadLine());
+
+//if (tempLocation != "00" && tempLocation != "0")
+//{
+//    int betLocation = Convert.ToInt32(tempLocation);
+//}
+//else if (tempLocation == "00")
+//{
+//    tempLocation = "37";
+//    int betLocation = Convert.ToInt32(tempLocation);
+//}
+//else if (tempLocation == "0")
+//{
+//    tempLocation = "38";
+//    int betLocation = Convert.ToInt32(tempLocation);
+//}
